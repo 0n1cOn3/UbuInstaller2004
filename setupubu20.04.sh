@@ -97,22 +97,11 @@ sleep 2
 echo -e ${Reset}
 
 if ! hash plasma-desktop 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
+	echo -e $Red "plasma-desktop Not Installed [✗]"
 	echo -e ${Reset}
-	sudo apt install plasma-desktop -y
+	sudo apt install kde-plasma-desktop -y
 else
 	echo -e $Green "plasma-desktop installed [✓]"
-    echo -e ${Reset}
-    sleep 2
-fi
-echo -e ${Reset}
-
-if ! hash plasma-nm 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}
-	sudo apt install plasma-nm -y
-else
-	echo -e $Green "plasma-nm installed [✓]"
     echo -e ${Reset}
     sleep 2
 fi
