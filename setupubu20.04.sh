@@ -32,7 +32,7 @@ if ! [ $(id -u) = 0 ]; then
    	clear
    	echo -e " ${Red}***************************************************************"
    	echo -e " ${Red}* ${Green}SetupUbu20.04 requires to be executed with root permission!${Red}"
-   	echo -e " ${Red}***************************************************************${White}"
+   	echo -e " ${Red}***************************************************************${Reset}"
    	sleep 2
    	clear
   	ls
@@ -49,30 +49,30 @@ fi
 clear
 echo -e " ${Red}****************************************************"
 echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
-echo -e " ${Red}****************************************************${White}"
+echo -e " ${Red}****************************************************${Reset}"
 sleep 2
-${White}
+${Reset}
 
 if ! hash git 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White} apt install git -y
+	${Reset} apt install git -y
 else
 	echo -e $Green " git installed [✓]"
-   ${White}
+   ${Reset}
    sleep 2
 fi
-${White}
+${Reset}
 
 if ! hash wget 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-   ${White} apt install wget -y
+   ${Reset} apt install wget -y
 else
 	echo -e $Green "wget installed [✓]"
-   ${White}
+   ${Reset}
    sleep 2
 fi
 
-${White}
+${Reset}
 clear
 
 ## Update Sources & Upgrade to the lastest Packages
@@ -82,7 +82,7 @@ echo -e " ${Red}********************************************************"
 echo -e " ${Red}* ${Green}Update source and upgrade to the lastest OS packages ${Red}*"
 echo -e " ${Red}********************************************************"
 sleep 2
-${White}
+${Reset}
 apt update -y
 apt upgrade -y
 clear
@@ -92,29 +92,29 @@ clear
 clear
 echo -e " ${Red}****************************************************"
 echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
-echo -e " ${Red}****************************************************${White}"
+echo -e " ${Red}****************************************************${Reset}"
 sleep 2
-${White}
+${Reset}
 
 if ! hash plasma-desktop 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}apt install plasma-desktop -y
+	${Reset}apt install plasma-desktop -y
 else
 	echo -e $Green "plasma-desktop installed [✓]"
-   ${White}
+   ${Reset}
    sleep 2
 fi
-${White}
+${Reset}
 
 if ! hash plasma-nm 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}apt install plasma-nm -y
+	${Reset}apt install plasma-nm -y
 else
 	echo -e $Green "plasma-nm installed [✓]"
-   ${White}
+   ${Reset}
    sleep 2
 fi
-${White}
+${Reset}
 
 ## here comes a check if the installer got interrupt. e.g.: Reboot
 
@@ -123,60 +123,60 @@ echo -e " ${Red}****************************************************"
 echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
 echo -e " ${Red}****************************************************"
 sleep 2
-${White}
+${Reset}
 
 if ! hash vlc 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}apt install vlc -y
+	${Reset}apt install vlc -y
 else
 	echo -e $Green "vlc installed [✓]"
-   ${White}
+   ${Reset}
    sleep 2
 fi
-${White}
+${Reset}
 
 if ! hash fail2ban 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}
+	${Reset}
 	apt install fail2ban -y
 	else
 	echo -e $Green "fail2ban installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
-${White}
+${Reset}
 
 if ! hash mpv 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}
+	${Reset}
 	apt install mpv -y
 	else
 	echo -e $Green "mpv installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
-${White}
+${Reset}
 
 if ! hash bitwarden 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}
+	${Reset}
 	sudo snap install bit
 	else
 	echo -e $Green "espeak-ng installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
 if ! hash espeak-ng 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}
+	${Reset}
 	apt install espeak-ng -y
 	else
 	echo -e $Green "espeak-ng installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
-${White}
+${Reset}
 clear
 
 ## local package required #dpkg -i teamviewer_15.16.8_amd64.deb
@@ -185,37 +185,37 @@ echo -e " ${Red}****************************************************"
 echo -e " ${Red}* ${Green}local package required...downloading...${Red}"
 echo -e " ${Red}****************************************************"
 sleep 2
-${White}
+${Reset}
 
 if ! hash teamviewer 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+	${Reset}wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
    	sudo dpkg -i teamviewer_amd64.deb
    	sudo apt install -f
 	else
 	echo -e $Green "Teamviewer installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
-${White}
+${Reset}
 
 ## same as above #dpkg -i anydesk_6.1.0-1_amd64.deb
 
 if ! hash anydesk 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}wget https://download.anydesk.com/linux/anydesk_6.1.0-1_amd64.deb
+	${Reset}wget https://download.anydesk.com/linux/anydesk_6.1.0-1_amd64.deb
    	sudo dpkg -i anydesk_6.1.0-1_amd64.deb
    	sudo apt install -f
 	else
 	echo -e $Green "Anydesk installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
 sudo apt autoremove -y
 clear
-${White}
+${Reset}
 
 ## Additional Stuff...
 
@@ -232,12 +232,12 @@ if ! [ -f "~/.local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
    	fc-cache -f -v
 	else
 	echo -e $Green "Apple Emoji Font installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
 clear
-${White}
+${Reset}
 
 ## Kernel Developer requirements
 
@@ -253,7 +253,7 @@ if ! hash bc 2>/dev/null;then
 	sudo apt-get install bc -y
 	else
 	echo -e $Green "bc Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -262,7 +262,7 @@ if ! hash bison 2>/dev/null;then
 	sudo apt-get install bison -y
 	else
 	echo -e $Green "bison Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -271,7 +271,7 @@ if ! hash build-essential 2>/dev/null;then
 	sudo apt-get install build-essential -y
 	else
 	echo -e $Green "bc Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -280,7 +280,7 @@ if ! hash zstd 2>/dev/null;then
 	sudo apt-get install zstd -y
 	else
 	echo -e $Green "zstd Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -289,7 +289,7 @@ if ! hash clang 2>/dev/null;then
 	sudo apt-get install bc -y
 	else
 	echo -e $Green "clang Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -298,7 +298,7 @@ if ! hash flex 2>/dev/null;then
 	sudo apt-get install flex -y
 	else
 	echo -e $Green "flex Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -307,7 +307,7 @@ if ! hash gnupg 2>/dev/null;then
 	sudo apt-get install gnupg -y
 	else
 	echo -e $Green "gnupg Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -316,7 +316,7 @@ if ! hash gperf 2>/dev/null;then
 	sudo apt-get install gperf -y
 	else
 	echo -e $Green "gperf Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -325,7 +325,7 @@ if ! hash ccache 2>/dev/null;then
 	sudo apt-get install ccache -y
 	else
 	echo -e $Green "ccache Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -334,7 +334,7 @@ if ! hash liblz4-tool 2>/dev/null;then
 	sudo apt-get install liblz4-tool -y
 	else
 	echo -e $Green "gnupg Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -343,7 +343,7 @@ if ! hash libncurses5-dev 2>/dev/null;then
 	sudo apt-get install libncurses5-dev -y
 	else
 	echo -e $Green "libncurses5-dev Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -352,7 +352,7 @@ if ! hash libsdl1.2-dev 2>/dev/null;then
 	sudo apt-get install libsdl1.2-dev -y
 	else
 	echo -e $Green "libsdl1.2-dev Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -361,7 +361,7 @@ if ! hash libstdc++6 2>/dev/null;then
 	sudo apt-get install libstdc++6 -y
 	else
 	echo -e $Green "libstdc++6 Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -370,7 +370,7 @@ if ! hash libxml2 2>/dev/null;then
 	sudo apt-get install libxml2 -y
 	else
 	echo -e $Green "libxml2 Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -379,7 +379,7 @@ if ! hash libxml2-utils 2>/dev/null;then
 	sudo apt-get install libxml2-utils -y
 	else
 	echo -e $Green "libxml2-utils Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -388,7 +388,7 @@ if ! hash lzop 2>/dev/null;then
 	sudo apt-get install lzop -y
 	else
 	echo -e $Green "lzop Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -397,7 +397,7 @@ if ! hash pngcrush 2>/dev/null;then
 	sudo apt-get install pngcrush -y
 	else
 	echo -e $Green "pngcrush Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -406,7 +406,7 @@ if ! hash schedtool 2>/dev/null;then
 	sudo apt-get install schedtool -y
 	else
 	echo -e $Green "lzop Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -415,7 +415,7 @@ if ! hash squashfs-tools 2>/dev/null;then
 	sudo apt-get install squashfs-tools -y
 	else
 	echo -e $Green "squashfs-tools Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -424,7 +424,7 @@ if ! hash xsltproc 2>/dev/null;then
 	sudo apt-get install xsltproc -y
 	else
 	echo -e $Green "xsltproc Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -433,7 +433,7 @@ if ! hash zlib1g-dev 2>/dev/null;then
 	sudo apt-get install zlib1g-dev -y
 	else
 	echo -e $Green "zlib1g-dev Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -442,7 +442,7 @@ if ! hash libncurses5-dev 2>/dev/null;then
 	sudo apt-get install libncurses5-dev -y
 	else
 	echo -e $Green "libncurses5-dev Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -451,7 +451,7 @@ if ! hash bzip2 2>/dev/null;then
 	sudo apt-get install bzip2 -y
 	else
 	echo -e $Green "bzip2 Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -460,7 +460,7 @@ if ! hash git 2>/dev/null;then
 	sudo apt-get install git -y
 	else
 	echo -e $Green "git Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -469,7 +469,7 @@ if ! hash gcc 2>/dev/null;then
 	sudo apt-get install gcc -y
 	else
 	echo -e $Green "gcc Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -478,7 +478,7 @@ if ! hash g++ 2>/dev/null;then
 	sudo apt-get install g++ -y
 	else
 	echo -e $Green "g++ Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -487,7 +487,7 @@ if ! hash libssl-dev 2>/dev/null;then
 	sudo apt-get install libssl-dev -y
 	else
 	echo -e $Green "libssl-dev Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -496,7 +496,7 @@ if ! hash openssl 2>/dev/null;then
 	sudo apt-get install openssl -y
 	else
 	echo -e $Green "openssl Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -505,7 +505,7 @@ if ! hash gcc-aarch64-linux-gnu 2>/dev/null;then
 	sudo apt-get install gcc-aarch64-linux-gnu -y
 	else
 	echo -e $Green "gcc-aarch64-linux-gnu Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -514,7 +514,7 @@ if ! hash gcc-arm-linux-gnueabihf 2>/dev/null;then
 	sudo apt-get install gcc-arm-linux-gnueabihf -y
 	else
 	echo -e $Green "gcc-arm-linux-gnueabihf Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -523,7 +523,7 @@ if ! hash lld 2>/dev/null;then
 	sudo apt-get install lld -y
 	else
 	echo -e $Green "lld Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -532,7 +532,7 @@ if ! hash gcc-arm-linux-gnueabi 2>/dev/null;then
 	sudo apt-get install gcc-arm-linux-gnueabi -y
 	else
 	echo -e $Green "gcc-arm-linux-gnueabi Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -541,12 +541,12 @@ if ! hash llvm 2>/dev/null;then
 	sudo apt-get install llvm
 	else
 	echo -e $Green "llvm Installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
 clear
-${White}
+${Reset}
 
 ## Snap Installations...
 
@@ -554,7 +554,7 @@ echo -e " ${Red}************************"
 echo -e " ${Red}* ${Green}Snap Installations... "
 echo -e " ${Red}************************"
 sleep 2
-${White}
+${Reset}
 sudo snap install code --classic
 #snap install icq-im
 sudo snap install telegram-desktop
@@ -569,7 +569,7 @@ echo -e " ${Red}************************"
 echo -e " ${Red}* ${Green}Adding Lutris PPA..."
 echo -e " ${Red}************************"
 sleep 2
-${White}
+${Reset}
 
 if [ -f "/etc/apt/sources.list.d/lutris-team-ubuntu-lutris-focal.list" ] 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
@@ -577,7 +577,7 @@ if [ -f "/etc/apt/sources.list.d/lutris-team-ubuntu-lutris-focal.list" ] 2>/dev/
   	sudo apt update -y
 	else
 	echo -e $Green "Lutris-Repo installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -589,14 +589,14 @@ echo -e " ${Red}************************"
 echo -e " ${Red}* ${Green}Lutris Installation... "
 echo -e " ${Red}************************"
 sleep 2
-${White}
+${Reset}
 
 if ! hash lutris 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	${White}apt install lutris -y
+	${Reset}apt install lutris -y
 	else
 	echo -e $Green "Lutris installed [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 clear
@@ -607,7 +607,7 @@ sleep 2
 echo -e "-----------------------------"
 echo -e "${Green}Cloning current Git Projects"
 echo -e "-----------------------------"
-${White}
+${Reset}
 sleep 2
 cd ${home}Dokumente
 
@@ -619,7 +619,7 @@ if ! [ -d "${home}/Dokumente/Github" ] 2>/dev/null;then
    	echo -e $Red "Directory created"
 	else
 	echo -e $Green "Directory already existing [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -632,7 +632,7 @@ if ! [ -d "${home}/Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
    	git clone https://gitlab.com/cyberknight777/thunderstrike-framework.git -b dev
 	else
 	echo -e $Green "Thunderstrike-Framework folder already existing [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
@@ -640,7 +640,7 @@ if [ -d "${home}/Dokumente/Github/TBomb" ] 2>/dev/null;then
    	git clone https://github.com/TheSpeedX/TBomb.git -b dev
 	else
    	echo -e $Green "TBomb folder already existing [✓]"
-   	${White}
+   	${Reset}
    	sleep 2
 fi
 
