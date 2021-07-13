@@ -14,16 +14,17 @@ clear
 home=$(pwd)
 
 exit_on_signal_SIGINT () {
-    echo -e "\n\n\e\${[✗] Installation has been abort!\e[0m"
+    echo -e "\n\n\e\$[✗] Installation has been abort!\e[0m"
     exit 0
 }
 trap exit_on_signal_SIGINT SIGINT
 
 ## Color the shell a bit :)) 
 
-White="\e[37m"
-Green="\e[32m"
-Red="\e[91m"
+White='\033[0;97m'
+Green='\033[0;32m'
+Red='\033[0;91m'
+Reset='\033[0m'
 
 ## Root Check
 
@@ -124,15 +125,15 @@ echo -e " ${Red}****************************************************"
 sleep 2
 ${White}
 
-#if ! hash vlc 2>/dev/null;then
-#	echo -e $Red "Not Installed [✗]"
-#	${White}apt install vlc -y
-#else
-#	echo -e $Green "vlc installed [✓]"
-#   ${White}
-#   sleep 2
-#fi
-#${White}
+if ! hash vlc 2>/dev/null;then
+	echo -e $Red "Not Installed [✗]"
+	${White}apt install vlc -y
+else
+	echo -e $Green "vlc installed [✓]"
+   ${White}
+   sleep 2
+fi
+${White}
 
 if ! hash fail2ban 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
