@@ -55,7 +55,7 @@ echo -e ${Reset}
 
 if ! hash git 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset} apt install git -y
+	echo -e ${Reset} sudo apt install git -y
 else
 	echo -e $Green " git installed [✓]"
    echo -e ${Reset}
@@ -65,7 +65,7 @@ echo -e ${Reset}
 
 if ! hash wget 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-   echo -e ${Reset} apt install wget -y
+   echo -e ${Reset} sudo apt install wget -y
 else
 	echo -e $Green "wget installed [✓]"
    echo -e ${Reset}
@@ -98,21 +98,23 @@ echo -e ${Reset}
 
 if ! hash plasma-desktop 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}apt install plasma-desktop -y
+	echo -e ${Reset}
+	sudo apt install plasma-desktop -y
 else
 	echo -e $Green "plasma-desktop installed [✓]"
-   echo -e ${Reset}
-   sleep 2
+    echo -e ${Reset}
+    sleep 2
 fi
 echo -e ${Reset}
 
 if ! hash plasma-nm 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}apt install plasma-nm -y
+	echo -e ${Reset}
+	sudo apt install plasma-nm -y
 else
 	echo -e $Green "plasma-nm installed [✓]"
-   echo -e ${Reset}
-   sleep 2
+    echo -e ${Reset}
+    sleep 2
 fi
 echo -e ${Reset}
 
@@ -130,8 +132,8 @@ if ! hash vlc 2>/dev/null;then
 	echo -e ${Reset}apt install vlc -y
 else
 	echo -e $Green "vlc installed [✓]"
-   echo -e ${Reset}
-   sleep 2
+    echo -e ${Reset}
+    sleep 2
 fi
 echo -e ${Reset}
 
@@ -160,7 +162,7 @@ echo -e ${Reset}
 if ! hash bitwarden 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
 	echo -e ${Reset}
-	sudo snap install bit
+	sudo snap install bitwarden
 	else
 	echo -e $Green "espeak-ng installed [✓]"
    	echo -e ${Reset}
@@ -170,7 +172,7 @@ fi
 if ! hash espeak-ng 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
 	echo -e ${Reset}
-	apt install espeak-ng -y
+	sudo apt install espeak-ng -y
 	else
 	echo -e $Green "espeak-ng installed [✓]"
    	echo -e ${Reset}
@@ -189,7 +191,8 @@ echo -e ${Reset}
 
 if ! hash teamviewer 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+	echo -e ${Reset}
+	wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
    	sudo dpkg -i teamviewer_amd64.deb
    	sudo apt install -f
 	else
@@ -204,7 +207,8 @@ echo -e ${Reset}
 
 if ! hash anydesk 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}wget https://download.anydesk.com/linux/anydesk_6.1.0-1_amd64.deb
+	echo -e ${Reset}
+	wget https://download.anydesk.com/linux/anydesk_6.1.0-1_amd64.deb
    	sudo dpkg -i anydesk_6.1.0-1_amd64.deb
    	sudo apt install -f
 	else
@@ -227,7 +231,7 @@ sleep 2
 if ! [ -f "~/.local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
    	wget https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf
-   	mv AppleColorEmoji.ttf  ~/.local/share/fonts
+   	mv AppleColorEmoji.ttf  /usr/local/share/fonts
    	rm AppleColorEmoji.ttf
    	fc-cache -f -v
 	else
@@ -593,7 +597,7 @@ echo -e ${Reset}
 
 if ! hash lutris 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}apt install lutris -y
+	echo -e ${Reset}sudo apt install lutris -y
 	else
 	echo -e $Green "Lutris installed [✓]"
    	echo -e ${Reset}
