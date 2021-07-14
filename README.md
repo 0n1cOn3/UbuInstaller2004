@@ -4,6 +4,8 @@
 My automated install scripts for a fresh ubuntu install.
 Theres also a script for PopOS! but quiet buggy ;-)
 
+run restore.sh after setup. For getting the plasma settings restored
+
 • Preconfig for Plasma with Win11 Theme has been saved with Konsave
 
 • Development Utilitys for compiling stuff
@@ -35,3 +37,5 @@ planned for beeing implemented:
 • Banana finance app
 
 • WPS Office
+
+• adding missing themes & icons for Win11 theme. 
