@@ -324,9 +324,8 @@ cd prosave
 python3 setup.py build
 sudo python3 setup.py install
 cd ..
-werbinich="whoami"
-cp -rf konsave /home/$werbinich/.config/konsave
-konsave -a ubufresh
+cp -nf konsave /home/server/.config/konsave
+konsave -a 1
 unset dir
 cd ..
 
