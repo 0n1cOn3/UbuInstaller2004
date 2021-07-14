@@ -263,14 +263,14 @@ sudo apt-get update --fix-missing -y
 pkg=(squashfs-tools bc bison gcc make python3-dev python3 wget curl build-essential zstd clang flex gnupg gperf ccache liblz4-tool libncurses5-dev libsdl1.2-dev libstdc++6 libxml2 libxml2-utils lzop pngcrush schedtool xsltproc zlib1g-dev libncurses5-dev bzip2 git g++ libssl-dev openssl gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf lld gcc-arm-linux-gnueabi llvm )
 for i in "${pkg[@]}"
 do
-echo -e $BOLD "" 
-echo -ne "${CYAN}${i}... -> "
-sleep 0.3
-if ! hash "${i}" 2>/dev/null;then
-echo -e $RED "${i} not Installed [✗]"
-sudo apt install "${i}" -y
+		echo -e $Reset "" 
+		echo -ne "${Red}${i}... -> "
+		sleep 0.3
+		if ! hash "${i}" 2>/dev/null;then
+		echo -e "${i} not Installed ${Red}[✗]"
+		sudo apt install "${i}" -y
 	else
-echo -e $GREEN "${i} Installed [✓]"
+		echo -e "${i} Installed ${Green}[✓]"
 fi
 done
 
