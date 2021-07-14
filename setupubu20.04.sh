@@ -106,9 +106,10 @@ if ! hash plasma-desktop 2>/dev/null;then
 	cd ..
 	rm -rf Win11OS-kde
 	set home="pwd"
-	cd ${home}profile_settings
+	cd profile_settings
 	cp -rf .* $HOME
 	unset home
+	cd ..
 	sleep 2
 else
 	echo -e $Green "plasma-desktop installed [✓]"
@@ -591,6 +592,10 @@ sudo snap install mailspring
 #snap install bitwarden
 sudo snap install bitwarden
 clear
+
+## Python Package installation for Plasma Profile backups/restores
+
+python -m pip install konsave
 
 ## Add Lutris PPA
 
