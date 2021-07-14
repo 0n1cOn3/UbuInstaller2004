@@ -324,7 +324,7 @@ cd prosave
 python3 setup.py build
 sudo python3 setup.py install
 cd ..
-cp -rf konsave /home/${whoami}/.config/konsave
+cp -rf konsave /home/$whoami/.config/konsave
 konsave -a ubufresh
 unset dir
 cd ..
