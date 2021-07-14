@@ -2,7 +2,7 @@
 # Automated Installation of common utilities and packages for Ubuntu 20.04
 
 My automated install scripts for a fresh ubuntu install.
-Theres also a script for PopOS! but quiet buggy ;-)
+But still sometimes quiet buggy ;-)
 
 run restore.sh after setup. For getting the plasma settings restored
 
@@ -32,7 +32,7 @@ run restore.sh after setup. For getting the plasma settings restored
 
 • Teamviewer
 
-planned for beeing implemented:
+## planned for beeing implemented:
 
 • Banana finance app
 
