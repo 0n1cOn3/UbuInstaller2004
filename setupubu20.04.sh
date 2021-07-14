@@ -105,15 +105,17 @@ if ! hash plasma-desktop 2>/dev/null;then
 	bash install.sh
 	cd ..
 	rm -rf Win11OS-kde
+	set home="pwd"
+	cd ${home}profile_settings
+	cp -rf .* $HOME
+	unset home
+	sleep 2
 else
 	echo -e $Green "plasma-desktop installed [✓]"
     echo -e ${Reset}
     sleep 2
 fi
 echo -e ${Reset}
-cd profile_settings
-cp .* $HOME
-clear
 
 ## here comes a check if the installer got interrupt. e.g.: Reboot
 
@@ -156,15 +158,16 @@ if ! hash mpv 2>/dev/null;then
 fi
 echo -e ${Reset}
 
-if ! hash bitwarden 2>/dev/null;then
+if ! hash firefox 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
 	echo -e ${Reset}
-	sudo snap install bitwarden
+	apt install firefox -y
 	else
-	echo -e $Green "espeak-ng installed [✓]"
+	echo -e $Green "mpv installed [✓]"
    	echo -e ${Reset}
    	sleep 2
 fi
+echo -e ${Reset}
 
 if ! hash espeak-ng 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
@@ -539,9 +542,33 @@ fi
 
 if ! hash llvm 2>/dev/null;then
 	echo -e $Red "llvm not Installed [✗]"
-	sudo apt-get install llvm
+	sudo apt-get install llvm -y
 	else
 	echo -e $Green "llvm Installed [✓]"
+   	echo -e ${Reset}
+   	sleep 2
+fi
+
+echo -e ${Reset}""
+
+## install Github Desktop
+
+if ! hash gdebi 2>/dev/null;then
+	echo -e $Red "gdebi not Installed [✗]"
+	sudo apt-get install gdebi-core -y
+	else
+	echo -e $Green "gdebi Installed [✓]"
+   	echo -e ${Reset}
+   	sleep 2
+fi
+
+if ! hash github-desktop 2>/dev/null;then
+	echo -e $Red "Github-Desktop not Installed [✗]"
+	wget https://github.com/shiftkey/desktop/releases/download/release-2.6.3-linux1/GitHubDesktop-linux-2.6.3-linux1.deb 
+    sudo gdebi GitHubDesktop-linux-2.6.3-linux1.deb
+    rm gdebi GitHubDesktop-linux-2.6.3-linux1.deb
+	else
+	echo -e $Green "Github Desktop Installed [✓]"
    	echo -e ${Reset}
    	sleep 2
 fi
@@ -562,6 +589,7 @@ sudo snap install telegram-desktop
 #snap install handbrake-jz
 sudo snap install mailspring
 #snap install bitwarden
+sudo snap install bitwarden
 clear
 
 ## Add Lutris PPA
@@ -572,7 +600,7 @@ echo -e " ${Red}************************"
 sleep 2
 echo -e ${Reset}
 
-if [ -f "/etc/apt/sources.list.d/lutris-team-ubuntu-lutris-focal.list" ] 2>/dev/null;then
+if ! [ -f "/etc/apt/sources.list.d/lutris-team-ubuntu-lutris-focal.list" ] 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
   	sudo add-apt-repository ppa:lutris-team/lutris
   	sudo apt update -y
@@ -610,9 +638,9 @@ echo -e "${Green}Cloning current Git Projects"
 echo -e "-----------------------------"
 echo -e ${Reset}
 sleep 2
-cd ${home}Dokumente
+cd ${HOME}Dokumente
 
-if ! [ -d "${home}/Dokumente/Github" ] 2>/dev/null;then
+if ! [ -d "${HOME}Dokumente/Github" ] 2>/dev/null;then
 	echo -e $Red "Directory not availble [✗]"
    	sleep 1
    	cd ${home}Dokumente
@@ -624,12 +652,12 @@ if ! [ -d "${home}/Dokumente/Github" ] 2>/dev/null;then
    	sleep 2
 fi
 
-cd "${home}"Dokumente/Github || return
+cd "${HOME}"Dokumente/Github || return
 clear
 
 echo -e "Cloning Current Git Projects now..."
 sleep 2
-if ! [ -d "${home}/Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
+if ! [ -d "${HOME}Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
    	git clone https://gitlab.com/cyberknight777/thunderstrike-framework.git -b dev
 	else
 	echo -e $Green "Thunderstrike-Framework folder already existing [✓]"
@@ -637,7 +665,7 @@ if ! [ -d "${home}/Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
    	sleep 2
 fi
 
-if [ -d "${home}/Dokumente/Github/TBomb" ] 2>/dev/null;then
+if [ -d "${HOME}Dokumente/Github/TBomb" ] 2>/dev/null;then
    	git clone https://github.com/TheSpeedX/TBomb.git -b dev
 	else
    	echo -e $Green "TBomb folder already existing [✓]"
