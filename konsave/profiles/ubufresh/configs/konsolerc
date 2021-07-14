@@ -1,0 +1,23 @@
+[Desktop Entry]
+DefaultProfile=Profile 2.profile
+
+[Favorite Profiles]
+Favorites=
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[KonsoleWindow]
+AllowMenuAccelerators=true
+ShowWindowTitleOnTitleBar=true
+UseSingleInstance=true
+
+[MainWindow]
+Height 768=472
+State=AAAA/wAAAAD9AAAAAAAAAngAAAHDAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1024=632
+
+[SearchSettings]
+SearchRegExpression=true

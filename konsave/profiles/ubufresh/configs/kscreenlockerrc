@@ -1,0 +1,8 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Greeter]
+Theme=com.github.yeyushengfan258.Win11OS-dark
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=file:///home/server/.local/share/wallpapers/Win11OS-dark/contents/images/3840x2400.jpg

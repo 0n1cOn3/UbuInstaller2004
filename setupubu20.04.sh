@@ -595,7 +595,12 @@ clear
 
 ## Python Package installation for Plasma Profile backups/restores
 
-python -m pip install konsave
+# cd $HOME/Dokumente/Github
+# git clone https://github.com/Prayag2/konsave
+# python3 setup.py build
+# sudo python3 setup.py install
+# set dir="pwd"
+# cp -rf ${dir}/konsave /home/${whoami}/.config/konsave
 
 ## Add Lutris PPA
 
