@@ -253,9 +253,9 @@ echo -e ${Reset}
 
 ## Kernel Developer requirements
 
-echo -e " ${Red}*****************************"
+echo -e " ${Red}*******************************"
 echo -e " ${Red}* ${Green}Kernel Development Stuff... ${Red}*"
-echo -e " ${Red}*****************************"
+echo -e " ${Red}*******************************"
 sleep 2
 
 sudo apt-get update --fix-missing -y
@@ -302,9 +302,9 @@ echo -e ${Reset}
 
 ## Snap Installations...
 
-echo -e " ${Red}****************************"
+echo -e " ${Red}*************************"
 echo -e " ${Red}* ${Green}Snap Installations... ${Red}*"
-echo -e " ${Red}****************************"
+echo -e " ${Red}*************************"
 sleep 2
 echo -e ${Reset}
 sudo snap install code --classic
@@ -317,7 +317,9 @@ sudo snap install bitwarden
 clear
 
 ## Python Package installation for Plasma Profile backups/restores
-echo -e "install Konsave"
+echo -e " ${Red}*************************"
+echo -e " ${Red}* ${Green}Installing Konsave... ${Red}*"
+echo -e " ${Red}*************************"
 sleep 2
 git clone https://github.com/Prayag2/konsave prosave
 cd prosave
