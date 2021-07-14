@@ -595,12 +595,14 @@ clear
 
 ## Python Package installation for Plasma Profile backups/restores
 
-# cd $HOME/Dokumente/Github
-# git clone https://github.com/Prayag2/konsave
-# python3 setup.py build
-# sudo python3 setup.py install
-# set dir="pwd"
-# cp -rf ${dir}/konsave /home/${whoami}/.config/konsave
+git clone https://github.com/Prayag2/konsave prosave
+cd prosave
+python3 setup.py build
+sudo python3 setup.py install
+set dir="pwd"
+cp -rf ${dir}/konsave /home/${whoami}/.config/konsave
+unset dir
+cd ..
 
 ## Add Lutris PPA
 
@@ -650,10 +652,10 @@ echo -e ${Reset}
 sleep 2
 cd ${HOME}Dokumente
 
-if ! [ -d "${HOME}Dokumente/Github" ] 2>/dev/null;then
+if ! [ -d "${HOME}/Dokumente/Github" ] 2>/dev/null;then
 	echo -e $Red "Directory not availble [✗]"
    	sleep 1
-   	cd ${home}Dokumente
+   	cd ${home}/Dokumente
    	mkdir Github
    	echo -e $Red "Directory created"
 	else
@@ -662,7 +664,7 @@ if ! [ -d "${HOME}Dokumente/Github" ] 2>/dev/null;then
    	sleep 2
 fi
 
-cd "${HOME}"Dokumente/Github || return
+cd "${HOME}"/Dokumente/Github || return
 clear
 
 echo -e "Cloning Current Git Projects now..."
