@@ -138,8 +138,8 @@ if ! hash vlc 2>/dev/null;then
 	apt install vlc -y
 else
 	echo -e $Green "vlc installed [✓]"
-    echo -e ${Reset}
-    sleep 2
+    	echo -e ${Reset}
+    	sleep 2
 fi
 echo -e ${Reset}
 
@@ -147,7 +147,7 @@ if ! hash fail2ban 2>/dev/null;then
 	echo -e $Red "fail2ban not Installed [✗]"
 	echo -e ${Reset}
 	apt install fail2ban -y
-	else
+else
 	echo -e $Green "fail2ban installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -158,7 +158,7 @@ if ! hash mpv 2>/dev/null;then
 	echo -e $Red "mpv not Installed [✗]"
 	echo -e ${Reset}
 	apt install mpv -y
-	else
+else
 	echo -e $Green "mpv installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -169,7 +169,7 @@ if ! hash firefox 2>/dev/null;then
 	echo -e $Red "Firefox not Installed [✗]"
 	echo -e ${Reset}
 	apt install firefox -y
-	else
+else
 	echo -e $Green "Firefox installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -180,7 +180,7 @@ if ! hash espeak-ng 2>/dev/null;then
 	echo -e $Red "espeak-ng not Installed [✗]"
 	echo -e ${Reset}
 	sudo apt install espeak-ng -y
-	else
+else
 	echo -e $Green "espeak-ng installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -203,7 +203,7 @@ if ! hash teamviewer 2>/dev/null;then
    	sudo dpkg -i teamviewer_amd64.deb
    	sudo apt install -f
 	rm teamviewer_amd64.deb
-	else
+else
 	echo -e $Green "Teamviewer installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -220,7 +220,7 @@ if ! hash anydesk 2>/dev/null;then
    	sudo dpkg -i anydesk_6.1.0-1_amd64.deb
    	sudo apt install -f
 	rm anydesk_6.1.0-1_amd64.deb
-	else
+else
 	echo -e $Green "Anydesk installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -242,7 +242,7 @@ if ! [ -f "/usr/local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
    	wget https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf
    	mv AppleColorEmoji.ttf  /usr/local/share/fonts
    	fc-cache -f -v
-	else
+else
 	echo -e $Green "Apple Emoji Font installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -264,7 +264,7 @@ pkg=(squashfs-tools bc bison gcc make python3-dev python3 wget curl build-essent
 for i in "${pkg[@]}"
 do
 		echo -e $Reset "" 
-		echo -ne "${Red}${i}... -> "
+		echo -ne "${Reset}${i}... -> "
 		sleep 0.3
 		if ! hash "${i}" 2>/dev/null;then
 		echo -e "${i} not Installed ${Red}[✗]"
@@ -283,7 +283,7 @@ echo -e ${Reset}""
 if ! hash gdebi 2>/dev/null;then
 	echo -e $Red "gdebi not Installed [✗]"
 	sudo apt-get install gdebi-core -y
-	else
+else
 	echo -e $Green "gdebi Installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -292,9 +292,9 @@ fi
 if ! hash github-desktop 2>/dev/null;then
 	echo -e $Red "Github-Desktop not Installed [✗]"
 	wget https://github.com/shiftkey/desktop/releases/download/release-2.6.3-linux1/GitHubDesktop-linux-2.6.3-linux1.deb 
-    sudo gdebi GitHubDesktop-linux-2.6.3-linux1.deb
-    rm gdebi GitHubDesktop-linux-2.6.3-linux1.deb
-	else
+    	sudo gdebi GitHubDesktop-linux-2.6.3-linux1.deb
+    	rm gdebi GitHubDesktop-linux-2.6.3-linux1.deb
+else
 	echo -e $Green "Github Desktop Installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -344,7 +344,7 @@ if ! [ -f "/etc/apt/sources.list.d/lutris-team-ubuntu-lutris-focal.list" ] 2>/de
 	echo -e $Red "Not Installed [✗]"
   	sudo add-apt-repository ppa:lutris-team/lutris
   	sudo apt update -y
-	else
+else
 	echo -e $Green "Lutris-Repo installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -364,7 +364,7 @@ if ! hash lutris 2>/dev/null;then
 	echo -e $Red "Lutris not Installed [✗]"
 	echo -e ${Reset}
 	sudo apt install lutris -y
-	else
+else
 	echo -e $Green "Lutris installed [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -387,7 +387,7 @@ if ! [ -d "${HOME}/Dokumente/Github" ] 2>/dev/null;then
    	cd ${home}/Dokumente
    	mkdir Github
    	echo -e $Red "Directory created"
-	else
+else
 	echo -e $Green "Directory already existing [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -398,17 +398,19 @@ clear
 
 echo -e "Cloning Current Git Projects now..."
 sleep 2
-if ! [ -d "${HOME}Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
+if ! [ -d "${HOME}/Dokumente/Github/thunderstrike-framework" ] 2>/dev/null;then
+	cd ${HOME}/Dokumente/Github
    	git clone https://gitlab.com/cyberknight777/thunderstrike-framework.git -b dev
-	else
+else
 	echo -e $Green "Thunderstrike-Framework folder already existing [✓]"
    	echo -e ${Reset}
    	sleep 2
 fi
 
-if [ -d "${HOME}Dokumente/Github/TBomb" ] 2>/dev/null;then
+if [ -d "${HOME}/Dokumente/Github/TBomb" ] 2>/dev/null;then
+   	cd ${HOME}Dokumente/Github
    	git clone https://github.com/TheSpeedX/TBomb.git -b dev
-	else
+else
    	echo -e $Green "TBomb folder already existing [✓]"
    	echo -e ${Reset}
    	sleep 2
@@ -416,4 +418,4 @@ fi
 
 echo -e "Fertig!"
 espeak-ng -vde "Installation abgeschlossen. Verlauf prüfen!"
-sleep 3
+sleep 2
