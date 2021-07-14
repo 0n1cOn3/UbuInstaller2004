@@ -8,7 +8,7 @@
 #-#-#-#-#-#-#-#-#-#-#
 
 ## Environment Config!
-cd $HOME
-cd UbuInstaller2004
-cp -nf konsave /home/server/.config/konsave
+dir=$(pwd)
+cd $dir
+cp -nf konsave/profiles/ubufresh /home/server/.config/konsave/profiles/
 konsave -a 1
