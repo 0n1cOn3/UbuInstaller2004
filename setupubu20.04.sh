@@ -55,7 +55,8 @@ echo -e ${Reset}
 
 if ! hash git 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset} sudo apt install git -y
+	echo -e ${Reset}
+	sudo apt install git -y
 else
 	echo -e $Green " git installed [✓]"
    echo -e ${Reset}
@@ -65,7 +66,8 @@ echo -e ${Reset}
 
 if ! hash wget 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
-   echo -e ${Reset} sudo apt install wget -y
+   echo -e ${Reset} 
+   sudo apt install wget -y
 else
 	echo -e $Green "wget installed [✓]"
    echo -e ${Reset}
@@ -92,7 +94,7 @@ clear
 clear
 echo -e " ${Red}****************************************************"
 echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
-echo -e " ${Red}****************************************************echo -e ${Reset}"
+echo -e " ${Red}****************************************************${Reset}"
 sleep 2
 echo -e ${Reset}
 
@@ -128,8 +130,9 @@ sleep 2
 echo -e ${Reset}
 
 if ! hash vlc 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}apt install vlc -y
+	echo -e $Red "VLC not Installed [✗]"
+	echo -e ${Reset}
+	apt install vlc -y
 else
 	echo -e $Green "vlc installed [✓]"
     echo -e ${Reset}
@@ -138,7 +141,7 @@ fi
 echo -e ${Reset}
 
 if ! hash fail2ban 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
+	echo -e $Red "fail2ban not Installed [✗]"
 	echo -e ${Reset}
 	apt install fail2ban -y
 	else
@@ -149,7 +152,7 @@ fi
 echo -e ${Reset}
 
 if ! hash mpv 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
+	echo -e $Red "mpv not Installed [✗]"
 	echo -e ${Reset}
 	apt install mpv -y
 	else
@@ -160,7 +163,7 @@ fi
 echo -e ${Reset}
 
 if ! hash firefox 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
+	echo -e $Red "Firefox not Installed [✗]"
 	echo -e ${Reset}
 	apt install firefox -y
 	else
@@ -171,7 +174,7 @@ fi
 echo -e ${Reset}
 
 if ! hash espeak-ng 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
+	echo -e $Red "espeak-ng not Installed [✗]"
 	echo -e ${Reset}
 	sudo apt install espeak-ng -y
 	else
@@ -196,6 +199,7 @@ if ! hash teamviewer 2>/dev/null;then
 	wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
    	sudo dpkg -i teamviewer_amd64.deb
    	sudo apt install -f
+	rm teamviewer_amd64.deb
 	else
 	echo -e $Green "Teamviewer installed [✓]"
    	echo -e ${Reset}
@@ -212,6 +216,7 @@ if ! hash anydesk 2>/dev/null;then
 	wget https://download.anydesk.com/linux/anydesk_6.1.0-1_amd64.deb
    	sudo dpkg -i anydesk_6.1.0-1_amd64.deb
    	sudo apt install -f
+	rm anydesk_6.1.0-1_amd64.deb
 	else
 	echo -e $Green "Anydesk installed [✓]"
    	echo -e ${Reset}
@@ -229,11 +234,10 @@ echo -e " ${Red}* ${Green}Additional Stuff..."
 echo -e " ${Red}*********************"
 sleep 2
 
-if ! [ -f "~/.local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
+if ! [ -f "/usr/local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
 	echo -e $Red "Not Installed [✗]"
    	wget https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf
    	mv AppleColorEmoji.ttf  /usr/local/share/fonts
-   	rm AppleColorEmoji.ttf
    	fc-cache -f -v
 	else
 	echo -e $Green "Apple Emoji Font installed [✓]"
@@ -601,6 +605,7 @@ python3 setup.py build
 sudo python3 setup.py install
 set dir="pwd"
 cp -rf ${dir}/konsave /home/${whoami}/.config/konsave
+konsave -a ubufresh
 unset dir
 cd ..
 
@@ -633,8 +638,9 @@ sleep 2
 echo -e ${Reset}
 
 if ! hash lutris 2>/dev/null;then
-	echo -e $Red "Not Installed [✗]"
-	echo -e ${Reset}sudo apt install lutris -y
+	echo -e $Red "Lutris not Installed [✗]"
+	echo -e ${Reset}
+	sudo apt install lutris -y
 	else
 	echo -e $Green "Lutris installed [✓]"
    	echo -e ${Reset}
