@@ -170,7 +170,7 @@ if ! hash firefox 2>/dev/null;then
 	echo -e ${Reset}
 	apt install firefox -y
 	else
-	echo -e $Green "mpv installed [✓]"
+	echo -e $Green "Firefox installed [✓]"
    	echo -e ${Reset}
    	sleep 2
 fi
@@ -601,13 +601,14 @@ sudo snap install bitwarden
 clear
 
 ## Python Package installation for Plasma Profile backups/restores
-
+echo -e "install Konsave"
+sleep 2
 git clone https://github.com/Prayag2/konsave prosave
 cd prosave
 python3 setup.py build
 sudo python3 setup.py install
-set dir="pwd"
-cp -rf ${dir}/konsave /home/${whoami}/.config/konsave
+cd ..
+cp -rf konsave /home/${whoami}/.config/konsave
 konsave -a ubufresh
 unset dir
 cd ..
