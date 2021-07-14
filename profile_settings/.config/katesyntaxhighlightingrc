@@ -1,0 +1,37 @@
+[Default Item Styles - Schema Normal]
+Error=ffbf0303,ff9c0e0e,,0,,1,-,-,,---
+
+[Highlighting Bash - Schema Normal]
+Alerts:Alert Level 1=28,ffe85848,ffe85848,,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 2=28,ffca9219,ffca9219,,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 3=28,ff81ca2d,ff81ca2d,,,,,fff7e6e6,ff000000,,---
+Alerts:Normal Text=0,,,,,,,,,,---
+Alerts:Region Marker=25,ff0057ae,ff00316e,,,,,ffe0e9f8,ff000000,,---
+Bash:Backquote=1,,,,,,,,,,---
+Bash:Builtin=6,ff644a9b,ff452886,,,,,,,,---
+Bash:Command=2,ff644a9b,ff452886,,,,,,,,---
+Bash:Comment=21,ff898887,ff5e5d5d,,,,,,,,---
+Bash:Control=1,,,,,,,,,,---
+Bash:Error=30,ffbf0303,ff9c0e0e,,,,,,,,---
+Bash:Escape=16,ff0057ae,ff00316e,,,,,,,,---
+Bash:Expression=29,ff006e28,ff006e28,,,,,,,,---
+Bash:Function=2,ff644a9b,ff452886,,,,,,,,---
+Bash:Keyword=1,,,,,,,,,,---
+Bash:Normal Text=0,,,,,,,,,,---
+Bash:Option=0,,,,,,,,,,---
+Bash:OtherCommand=7,ff0095ff,ffffffff,,,,,,,,---
+Bash:Path=0,,,,,,,,,,---
+Bash:Redirection=5,,,,,,,,,,---
+Bash:String DoubleQ=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Bash:String Escape=16,ff0057ae,ff00316e,,,,,,,,---
+Bash:String SingleQ=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Bash:String Transl.=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Bash:Variable=3,ff0057ae,ff00316e,,,,,,,,---
+Modelines:Comment=21,ff898887,ff5e5d5d,,,,,,,,---
+Modelines:Keyword=23,ffca60ca,ffa44ea4,,,,,,,,---
+Modelines:Number=17,ffb08000,ff805c00,,,,,,,,---
+Modelines:Option OFF=29,ff006e28,ff006e28,,,,,,,,---
+Modelines:Option ON=29,ff006e28,ff006e28,,,,,,,,---
+Modelines:String=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Modelines:Value=29,ff006e28,ff006e28,,,,,,,,---
+Modelines:Variable=24,ff0095ff,ffffffff,,,,,,,,---

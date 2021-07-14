@@ -1,0 +1,6 @@
+[History]
+CompletionItems=unused
+
+[Location Bar]
+ComboContents[$e]=https://github.com/shiftkey,http://duckduckgo.ch/
+ComboIconCache[$e]=https://github.com/shiftkey,$HOME/.cache/favicons/github.githubassets.com_favicons_favicon.png,http://duckduckgo.ch/,text-html

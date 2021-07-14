@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Mac-11
+Comment=default GTK theme for LINUX
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Mac-11
+MetacityTheme=Mac-11
+IconTheme=Mac-11
+CursorTheme=Mac-11
+ButtonLayout=menu:minimize,maximize,close

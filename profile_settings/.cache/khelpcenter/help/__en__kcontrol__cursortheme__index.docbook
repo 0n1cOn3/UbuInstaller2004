@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+
+Cursor Theme
+
+MikeMcBride no mail
+BradHards bradh@frogmouth.net
+
+
+
+2018-03-24
+Plasma 5.12
+
+
+This is the documentation for the System Settings module to 
+customize the mouse cursor appearance.
+
+
+
+
+KDE
+Systemsettings
+mouse
+cursor
+
+
+
+
+This module allows you to select from a number of installed cursor themes
+from a preview of the cursor display.
+
+
+The features provided by this module may not be available on some systems. 
+Your system may need to be updated to support cursor themes.
+
+
+
+If you have additional cursor themes available, you can install and remove 
+them using the buttons at the bottom of the list box. Note that you cannot remove the default themes.
+
+
+Use the Get new Themes button to launch the Get Hot New Stuff dialog and 
+download additional themes from the Internet.
+
+Some themes allow to choose the cursor size. Available sizes are
+displayed hoovering a theme.
+
+
+
+The size can be set to the Resolution dependent or one of the sizes available for your theme.
+
+
+

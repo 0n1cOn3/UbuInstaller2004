@@ -1,0 +1,44 @@
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAACm/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawEAAAAmAAAAogAAAHUBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAADJAAAB+AAAAHUBAAADAAAAAQAAALgAAAKb/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAACYAAAKbAAABJQEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAEQBAAADAAACjgAAApsAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+Window-Maximized 768x1024=true
+
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+BrowseThroughArchives=true
+UseTabForSwitchingSplitView=true
+Version=200
+ViewPropsTimestamp=2021,7,13,23,52,26
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+Height 768=514
+Width 1024=427
+
+[MainWindow]
+Height 768=500
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAACm/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawEAAAAmAAAAjAAAAF0BAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAACzAAACDgAAAF0BAAADAAAAAQAAALgAAAKb/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAACYAAAKbAAABDgEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAACjgAAApsAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1024=750
+Window-Maximized 768x1024=true
+
+[PlacesPanel]
+IconSize=22
+
+[PreviewSettings]
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[SettingsDialog]
+Height 768=429
+Width 1024=540
+
+[ViewPropertiesDialog]
+Height 768=548
+Width 1024=370
