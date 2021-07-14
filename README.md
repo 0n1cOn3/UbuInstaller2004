@@ -24,3 +24,7 @@ Theres also a script for PopOS! but quiet buggy ;-)
 • Snap Package Management
 
 • Konsave
+
+• Anydesk
+
+• Teamviewer
