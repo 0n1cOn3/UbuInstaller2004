@@ -101,7 +101,10 @@ echo -e ${Reset}
 if ! hash plasma-desktop 2>/dev/null;then
 	echo -e $Red "plasma-desktop Not Installed [✗]"
 	echo -e ${Reset}
-	sudo apt install kde-plasma-desktop
+	sudo apt install kde-plasma-desktop -y
+	sleep 2 
+	echo -e "Continue Installation of GUI Environment..."
+	sleep 2
 	git clone https://github.com/yeyushengfan258/Win11OS-kde
 	cd Win11OS-kde
 	bash install.sh
