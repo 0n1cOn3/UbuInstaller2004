@@ -268,7 +268,7 @@ echo -ne "${CYAN}${i}... -> "
 sleep 0.3
 if ! hash "${i}" 2>/dev/null;then
 echo -e $RED "${i} not Installed [✗]"
-sudo apt install "${i}"
+sudo apt install "${i}" -y
 	else
 echo -e $GREEN "${i} Installed [✓]"
 fi
