@@ -273,9 +273,6 @@ do
 		echo -e "${i} Installed ${Green}[✓]"
 fi
 done
-
-fi
-
 echo -e ${Reset}""
 
 ## install Github Desktop
