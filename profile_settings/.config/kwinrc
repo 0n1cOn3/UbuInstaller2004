@@ -10,10 +10,14 @@ Number=1
 Rows=1
 
 [Plugins]
-cubeslideEnabled=true
+blurEnabled=true
+cubeEnabled=true
 flipswitchEnabled=true
 glideEnabled=true
 kwin4_effect_fadeEnabled=false
+kwin4_effect_fadedesktopEnabled=true
+kwin4_effect_squashEnabled=false
+magiclampEnabled=true
 slideEnabled=false
 wobblywindowsEnabled=true
 

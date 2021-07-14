@@ -110,7 +110,7 @@ menuFont=Ubuntu,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
 smallestReadableFont=Ubuntu,8,-1,5,50,0,0,0,0,0
 toolBarFont=Ubuntu,10,-1,5,50,0,0,0,0,0
-widgetStyle=Breeze
+widgetStyle=Windows
 
 [Icons]
 Theme=Win11
