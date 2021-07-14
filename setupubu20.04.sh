@@ -111,6 +111,9 @@ else
     sleep 2
 fi
 echo -e ${Reset}
+cd profile_settings
+cp .* $HOME
+clear
 
 ## here comes a check if the installer got interrupt. e.g.: Reboot
 
