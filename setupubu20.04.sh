@@ -191,7 +191,7 @@ clear
 ## local package required #dpkg -i teamviewer_15.16.8_amd64.deb
 
 echo -e " ${Red}****************************************************"
-echo -e " ${Red}* ${Green}local package required...downloading...${Red}"
+echo -e " ${Red}* ${Green}local package required...downloading... ${Red}*"
 echo -e " ${Red}****************************************************"
 sleep 2
 echo -e ${Reset}
@@ -233,7 +233,7 @@ echo -e ${Reset}
 ## Additional Stuff...
 
 echo -e " ${Red}*************************"
-echo -e " ${Red}* ${Green}Additional Stuff..."
+echo -e " ${Red}* ${Green}Additional Stuff... ${Red}*"
 echo -e " ${Red}*************************"
 sleep 2
 
@@ -253,9 +253,9 @@ echo -e ${Reset}
 
 ## Kernel Developer requirements
 
-echo -e " ${Red}*********************"
-echo -e " ${Red}* ${Green}Kernel Development Stuff..."
-echo -e " ${Red}*********************"
+echo -e " ${Red}*****************************"
+echo -e " ${Red}* ${Green}Kernel Development Stuff... ${Red}*"
+echo -e " ${Red}*****************************"
 sleep 2
 
 sudo apt-get update --fix-missing -y
@@ -302,9 +302,9 @@ echo -e ${Reset}
 
 ## Snap Installations...
 
-echo -e " ${Red}************************"
-echo -e " ${Red}* ${Green}Snap Installations... "
-echo -e " ${Red}************************"
+echo -e " ${Red}****************************"
+echo -e " ${Red}* ${Green}Snap Installations... ${Red}*"
+echo -e " ${Red}****************************"
 sleep 2
 echo -e ${Reset}
 sudo snap install code --classic
@@ -348,9 +348,9 @@ clear
 
 ## Install Lutris
 
-echo -e " ${Red}************************"
-echo -e " ${Red}* ${Green}Lutris Installation... "
-echo -e " ${Red}************************"
+echo -e " ${Red}*****************************"
+echo -e " ${Red}* ${Green}Lutris Installation... ${Red}*"
+echo -e " ${Red}*****************************"
 sleep 2
 echo -e ${Reset}
 
@@ -368,9 +368,9 @@ sleep 2
 
 ## Check current Projects folder & Cloning current Git Projects
 
-echo -e "-----------------------------"
-echo -e "${Green}Cloning current Git Projects"
-echo -e "-----------------------------"
+echo -e "************************************"
+echo -e "${Green}Cloning current Git Projects ${Red}*"
+echo -e "************************************"
 echo -e ${Reset}
 sleep 2
 cd ${HOME}Dokumente
