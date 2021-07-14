@@ -324,7 +324,7 @@ cd prosave
 python3 setup.py build
 sudo python3 setup.py install
 cd ..
-bash restore.sh
+bash ./restore.sh
 
 ## Add Lutris PPA
 
