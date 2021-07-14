@@ -99,7 +99,12 @@ echo -e ${Reset}
 if ! hash plasma-desktop 2>/dev/null;then
 	echo -e $Red "plasma-desktop Not Installed [✗]"
 	echo -e ${Reset}
-	sudo apt install kde-plasma-desktop -y
+	sudo apt install kde-plasma-desktop
+	git clone https://github.com/yeyushengfan258/Win11OS-kde
+	cd Win11OS-kde
+	bash install.sh
+	cd ..
+	rm -rf Win11OS-kde
 else
 	echo -e $Green "plasma-desktop installed [✓]"
     echo -e ${Reset}
