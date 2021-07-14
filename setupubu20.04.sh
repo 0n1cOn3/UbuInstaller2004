@@ -80,9 +80,9 @@ clear
 ## Update Sources & Upgrade to the lastest Packages
 
 clear
-echo -e " ${Red}********************************************************"
-echo -e " ${Red}* ${Green}Update source and upgrade to the lastest OS packages ${Red}*"
-echo -e " ${Red}********************************************************"
+echo -e " ${Red}***************************************************************"
+echo -e " ${Red}* ${Green}Update source and upgrade to the latest OS packages ${Red}*"
+echo -e " ${Red}***************************************************************"
 sleep 2
 echo -e ${Reset}
 apt update -y
@@ -92,9 +92,9 @@ clear
 ## Install Tools for daily usage: 0n1 Daily App Tools
 
 clear
-echo -e " ${Red}****************************************************"
-echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
-echo -e " ${Red}****************************************************${Reset}"
+echo -e " ${Red}*************************************************************"
+echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}*"
+echo -e " ${Red}*************************************************************"
 sleep 2
 echo -e ${Reset}
 
@@ -126,9 +126,9 @@ echo -e ${Reset}
 ## here comes a check if the installer got interrupt. e.g.: Reboot
 
 clear
-echo -e " ${Red}****************************************************"
-echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation${Red}"
-echo -e " ${Red}****************************************************"
+echo -e " ${Red}*************************************************************"
+echo -e " ${Red}* ${Green}Preparing System to continue OS User Installation ${Red}*"
+echo -e " ${Red}*************************************************************"
 sleep 2
 echo -e ${Reset}
 
@@ -232,9 +232,9 @@ echo -e ${Reset}
 
 ## Additional Stuff...
 
-echo -e " ${Red}*********************"
+echo -e " ${Red}*************************"
 echo -e " ${Red}* ${Green}Additional Stuff..."
-echo -e " ${Red}*********************"
+echo -e " ${Red}*************************"
 sleep 2
 
 if ! [ -f "/usr/local/share/fonts/AppleColorEmoji.ttf" ] 2>/dev/null;then
@@ -323,6 +323,7 @@ git clone https://github.com/Prayag2/konsave prosave
 cd prosave
 python3 setup.py build
 sudo python3 setup.py install
+cd ..
 bash restore.sh
 
 ## Add Lutris PPA
