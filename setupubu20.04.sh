@@ -323,11 +323,7 @@ git clone https://github.com/Prayag2/konsave prosave
 cd prosave
 python3 setup.py build
 sudo python3 setup.py install
-cd ..
-cp -nf konsave /home/server/.config/konsave
-konsave -a 1
-unset dir
-cd ..
+bash restore.sh
 
 ## Add Lutris PPA
 
