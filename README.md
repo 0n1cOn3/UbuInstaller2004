@@ -1,4 +1,5 @@
-# UbuInstaller2004
+# UbuInstaller20.04
+# Automated Installation of common utilities and packages for Ubuntu 20.04
 
 My automated install scripts for a fresh ubuntu install.
 Theres also a script for PopOS! but quiet buggy ;-)
@@ -15,7 +16,7 @@ Theres also a script for PopOS! but quiet buggy ;-)
 
 • mpv & VLC
 
-• KDE Plasma Desktop
+• KDE Plasma Desktop (SDDM as WM/DE)
 
 • Firefox
 
@@ -28,3 +29,9 @@ Theres also a script for PopOS! but quiet buggy ;-)
 • Anydesk
 
 • Teamviewer
+
+planned for beeing implemented:
+
+• Banana finance app
+
+• WPS Office
