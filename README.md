@@ -39,3 +39,5 @@ run restore.sh after setup. For getting the plasma settings restored
 • WPS Office
 
 • adding missing themes & icons for Win11 theme. 
+
+• oh-my-zsh integration & load preconfigured settings
