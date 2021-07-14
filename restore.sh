@@ -10,5 +10,5 @@
 ## Environment Config!
 dir=$(pwd)
 cd $dir
-cp -nf konsave/profiles/ubufresh /home/server/.config/konsave/profiles/
+cp -nfr konsave/profiles/ubufresh /home/server/.config/konsave/profiles/
 konsave -a 1
